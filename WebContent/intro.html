@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+</head>
+<body>
+
+<p>Click on the buttons to create your list and make your dreams come true!! (click on your browsers back arrow to get back to this menu.)</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openList(event, 'List')">Build List</button>
+  <button class="tablinks" onclick="openTravelLodging(event, 'TravelLodging')">Book Travel and Lodging</button>
+  <button class="tablinks" onclick="openComments(event, 'Comments')">Make Comments About your trip!</button>
+</div>
+
+<div id="List" class="tabcontent">
+  <h3>Build List</h3>
+  <p>Click on the below link to pick some ideas that you can choose for your bucket list.</p>
+  <a href="https://www.ranker.com/list/bucket-list-ideas/lauren-slocum">Bucket List Builder</a> 
+</div>
+
+<div id="TravelLodging" class="tabcontent">
+  <h3>Book Travel and Lodging</h3>
+  <p>Click on the below link to book travel and lodging to your bucket list destination.</p> 
+  <a href="https://www.travelocity.com/">Book Travel and Lodging Here!!</a> 
+</div>
+
+<div id="Comments" class="tabcontent">
+  <h3>Make Comments About your Trip</h3>
+  <p>Click on the below link to make comments about your bucket list trip.</p> 
+  <a href="comments.html">Make Comments about your trip!!</a> 
+</div>
+
+<script>
+function openList(evt, list) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(list).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openTravelLodging(evt, travellodging) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(travellodging).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<script>
+function openComments(evt, comments) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(comments).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<img src="travelpic.jpg" alt="Bucket List Pic" style="width:500px;height:250px;border:0;"> 
+     
+</body>
+</html> 
+
+
